@@ -1,0 +1,27 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          resize-rootfs
+# Required-Start:    mountall
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Resize root filesystem on first boot
+### END INIT INFO
+
+case "$1" in
+    start)
+        echo "[Resize] Checking if resize is needed..."
+
+        ROOT_PART=$(findmnt / -o SOURCE -n)
+        DEVICE=$(echo "$ROOT_PART" | sed 's/[0-9]*$//')
+
+        echo "[Resize] Growing partition $ROOT_PART on $DEVICE..."
+        parted "$DEVICE" resizepart 2 100% || true
+
+        echo "[Resize] Resizing filesystem..."
+        resize2fs "$ROOT_PART"
+
+        echo "[Resize] Done! Disabling script..."
+        rm -f /etc/init.d/S01resize-rootfs
+        ;;
+esac
