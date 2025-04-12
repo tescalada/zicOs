@@ -76,3 +76,8 @@ BR2_PACKAGE_RPI_FIRMWARE_CONFIG_FILE="../linux.conf"
 
 # post build script: this will run after the rootfs is built on the build machine and not the target
 # BR2_ROOTFS_POST_BUILD_SCRIPT="../post-build.sh"
+
+# gen img file
+BR2_TARGET_ROOTFS_SDIMAGE=y
+BR2_TARGET_ROOTFS_GENIMAGE=y
+BR2_TARGET_ROOTFS_GENIMAGE_CONFIG="../genimage.cfg"

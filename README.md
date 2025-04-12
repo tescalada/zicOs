@@ -14,21 +14,21 @@ sudo apt install build-essential git cpio rsync unzip bc
 Clone it:
 
 ```sh
-git clone https://github.com/apiel/zicOs.git
+git clone --recursive https://github.com/apiel/zicOs.git
 cd zicOs
 ```
 
-Move contents into a full Buildroot source tree or clone Buildroot:
-```sh
-git clone https://github.com/buildroot/buildroot.git
-cd buildroot
-cp -r ../custom/* .
-```
+> **Note:** If the repository has already been cloned but submodules are missing, run the following command to pull them:
+>
+> ```sh
+> git submodule update --init
+> ```
 
 Build it:
 
 ```sh
-make zicbox_defconfig
+cd buildroot
+make BR2_DEFCONFIG=../zicbox_defconfig defconfig
 make
 ```
 
