@@ -61,9 +61,18 @@ BR2_PACKAGE_GDB=y
 BR2_PACKAGE_GIT=y
 BR2_PACKAGE_VIM_TINY=y
 
+BR2_PACKAGE_LIBBCM2835=y
+
+BR2_PACKAGE_LIBSNDFILE=y
+BR2_PACKAGE_LIBRTMIDI=y
+BR2_PACKAGE_NLOHMANN_JSON=y
+BR2_PACKAGE_FREETYPE=y
+
 # custom overlay
-BR2_ROOTFS_OVERLAY="board/zicbox/overlay"
+BR2_ROOTFS_OVERLAY="../overlay"
 
 # custom config
-# BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="board/zicbox/linux.config"
+BR2_PACKAGE_RPI_FIRMWARE_CONFIG_FILE="../linux.conf"
 
+# post build script: this will run after the rootfs is built on the build machine and not the target
+# BR2_ROOTFS_POST_BUILD_SCRIPT="../post-build.sh"
