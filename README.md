@@ -18,7 +18,7 @@ git clone --recursive https://github.com/apiel/zicOs.git
 cd zicOs
 ```
 
-> **Note:** If the repository has already been cloned but submodules are missing, run the following command to pull them:
+> [!TIP] If the repository has already been cloned but submodules are missing, run the following command to pull them:
 >
 > ```sh
 > git submodule update --init
@@ -33,3 +33,9 @@ make
 ```
 
 Flash `output/images/sdcard.img` to your SD card.
+
+> [!TIP] Clean everything
+>
+> ```sh
+> make distclean
+> ```
