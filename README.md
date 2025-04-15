@@ -41,3 +41,10 @@ Flash `output/images/sdcard.img` to your SD card.
 > ```sh
 > make distclean
 > ```
+
+> [!TIP]
+> To edit the config, run:
+>
+> ```sh
+> make BR2_EXTERNAL=../packages menuconfig
+> ```

@@ -1,11 +1,10 @@
+# BR2_EXTERNAL=../packages
+
 #
 # Automatically generated file; DO NOT EDIT.
 # Buildroot 2025.02-242-gc497e5fcc7 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
-BR2_EXTERNAL_NAMES="External_packages"
-BR2_EXTERNAL_External_packages_PATH="/home/alex/Music/zicOs/packages"
-BR2_EXTERNAL_External_packages_VERSION="-g99b283c-dirty"
 BR2_HOST_GCC_AT_LEAST_4_9=y
 BR2_HOST_GCC_AT_LEAST_5=y
 BR2_HOST_GCC_AT_LEAST_6=y
@@ -712,9 +711,7 @@ BR2_PACKAGE_KODI_ARCH_SUPPORTS=y
 # BR2_PACKAGE_OPUS_TOOLS is not set
 # BR2_PACKAGE_PIPEWIRE is not set
 BR2_PACKAGE_PULSEAUDIO_HAS_ATOMIC=y
-BR2_PACKAGE_PULSEAUDIO_ENABLE_ATOMIC=y
-BR2_PACKAGE_PULSEAUDIO=y
-BR2_PACKAGE_PULSEAUDIO_DAEMON=y
+# BR2_PACKAGE_PULSEAUDIO is not set
 # BR2_PACKAGE_SOX is not set
 # BR2_PACKAGE_SPEECHD is not set
 # BR2_PACKAGE_SQUEEZELITE is not set
@@ -887,7 +884,7 @@ BR2_PACKAGE_GIT=y
 # BR2_PACKAGE_GREP is not set
 # BR2_PACKAGE_JO is not set
 # BR2_PACKAGE_JQ is not set
-BR2_PACKAGE_LIBTOOL=y
+# BR2_PACKAGE_LIBTOOL is not set
 # BR2_PACKAGE_MAKE is not set
 # BR2_PACKAGE_MAWK is not set
 # BR2_PACKAGE_PATCH is not set
@@ -2231,11 +2228,11 @@ BR2_PACKAGE_LIBEASTL_ARCH_SUPPORTS=y
 #
 # libexecinfo needs a musl or uclibc toolchain w/ dynamic library
 #
-BR2_PACKAGE_LIBFFI=y
+# BR2_PACKAGE_LIBFFI is not set
 # BR2_PACKAGE_LIBFUTILS is not set
 # BR2_PACKAGE_LIBGEE is not set
 # BR2_PACKAGE_LIBGEOS is not set
-BR2_PACKAGE_LIBGLIB2=y
+# BR2_PACKAGE_LIBGLIB2 is not set
 # BR2_PACKAGE_LIBGLOB is not set
 # BR2_PACKAGE_LIBICAL is not set
 # BR2_PACKAGE_LIBITE is not set
@@ -2362,11 +2359,7 @@ BR2_PACKAGE_NCURSES_ADDITIONAL_TERMINFO=""
 # BR2_PACKAGE_NEWT is not set
 # BR2_PACKAGE_ONIGURUMA is not set
 # BR2_PACKAGE_PCRE is not set
-BR2_PACKAGE_PCRE2=y
-# BR2_PACKAGE_PCRE2_16 is not set
-# BR2_PACKAGE_PCRE2_32 is not set
-BR2_PACKAGE_PCRE2_JIT_ARCH_SUPPORTS=y
-# BR2_PACKAGE_PCRE2_JIT is not set
+# BR2_PACKAGE_PCRE2 is not set
 # BR2_PACKAGE_POPT is not set
 # BR2_PACKAGE_RE2 is not set
 # BR2_PACKAGE_READLINE is not set
@@ -2933,7 +2926,7 @@ BR2_PACKAGE_EFIVAR_ARCH_SUPPORTS=y
 # BR2_PACKAGE_FTOP is not set
 # BR2_PACKAGE_GETENT is not set
 # BR2_PACKAGE_GKRELLM is not set
-BR2_PACKAGE_HTOP=y
+# BR2_PACKAGE_HTOP is not set
 # BR2_PACKAGE_IBM_SW_TPM2 is not set
 BR2_PACKAGE_INITSCRIPTS=y
 
@@ -4172,12 +4165,3 @@ BR2_TARGET_UBOOT_CUSTOM_PATCH_DIR=""
 # BR2_BINUTILS_VERSION_2_22 is not set
 # BR2_PACKAGE_GPU_VIV_BIN_MX6Q is not set
 # BR2_TARGET_UBOOT_NETWORK is not set
-
-#
-# External options
-#
-
-#
-# External packages for zicBox (in /home/alex/Music/zicOs/packages)
-#
-BR2_PACKAGE_RTMIDI=y
