@@ -4,13 +4,6 @@ What’s Inside:
 - `configs/zicbox_defconfig`: starter config (CM4, SSH, Wi-Fi, PulseAudio, opkg)
 - `board/zicbox/overlay/`: folder for system overlays (includes autostart script for `/opt/zicBox/pixel`)
 
-Install dependencies:
-
-```sh
-sudo apt update
-sudo apt install build-essential git cpio rsync unzip bc
-```
-
 Clone it:
 
 ```sh
