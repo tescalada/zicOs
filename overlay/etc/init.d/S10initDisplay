@@ -1,0 +1,2 @@
+#!/bin/sh
+/opt/splash >> /var/log/splash.log 2>&1

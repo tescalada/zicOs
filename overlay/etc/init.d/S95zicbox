@@ -1,0 +1,2 @@
+#!/bin/sh
+cd /opt/zicBox && ./pixel >> /var/log/pixel.log 2>&1
