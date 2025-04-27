@@ -18,6 +18,16 @@ cd zicOs
 > git submodule update --init
 > ```
 
+Configure wifi:
+
+Edit `overlay/etc/wpa_supplicant.conf`:
+```conf
+network={
+    ssid="your_ssid"
+    psk="your_password"
+}
+```
+
 Build it:
 
 ```sh
