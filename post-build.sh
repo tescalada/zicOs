@@ -21,3 +21,6 @@ cd /tmp
 wget https://github.com/filebrowser/filebrowser/releases/download/v2.32.0/linux-arm64-filebrowser.tar.gz
 tar -xzf /tmp/linux-arm64-filebrowser.tar.gz --strip-components=0 -C ${TARGET_DIR}/usr/bin filebrowser
 tar xzf /tmp/linux-arm64-filebrowser.tar.gz
+
+# Move pulse init.d
+mv ${TARGET_DIR}/etc/init.d/S50pulseaudio ${TARGET_DIR}/etc/init.d/S94pulseaudio
