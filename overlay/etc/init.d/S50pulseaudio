@@ -3,7 +3,6 @@
 # Starts pulseaudio.
 #
 
-
 start() {
 	printf "Starting pulseaudio: "
 	umask 077
