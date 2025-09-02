@@ -44,3 +44,5 @@ Flash `output/images/sdcard.img` to your SD card.
 > ```sh
 > make distclean
 > ```
+
+To update an already configured buildroot, run `make menuconfig`, once updated, run `make`.

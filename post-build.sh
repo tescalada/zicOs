@@ -23,17 +23,17 @@ else
     rm arm_full.zip
 fi
 
-# Install filebrowser: web server for file management
-if [ ! -f "${TARGET_DIR}/usr/bin/filebrowser" ]; then
-    cd /tmp
-    wget https://github.com/filebrowser/filebrowser/releases/download/v2.32.0/linux-arm64-filebrowser.tar.gz
-    tar -xzf /tmp/linux-arm64-filebrowser.tar.gz --strip-components=0 -C ${TARGET_DIR}/usr/bin filebrowser
-    rm /tmp/linux-arm64-filebrowser.tar.gz
-else
-    echo "filebrowser already installed."
-fi
+## Install filebrowser: web server for file management
+#if [ ! -f "${TARGET_DIR}/usr/bin/filebrowser" ]; then
+#    cd /tmp
+#    wget https://github.com/filebrowser/filebrowser/releases/download/v2.32.0/linux-arm64-filebrowser.tar.gz
+#    tar -xzf /tmp/linux-arm64-filebrowser.tar.gz --strip-components=0 -C ${TARGET_DIR}/usr/bin filebrowser
+#    rm /tmp/linux-arm64-filebrowser.tar.gz
+#else
+#    echo "filebrowser already installed."
+#fi
 
 # Move pulse init.d
 # In overlay, it is called S50pulseaudio, in order to overwrite the original one
 # Then in the post-build, we rename it to S94...
-mv ${TARGET_DIR}/etc/init.d/S50pulseaudio ${TARGET_DIR}/etc/init.d/S94pulseaudio
+# mv ${TARGET_DIR}/etc/init.d/S50pulseaudio ${TARGET_DIR}/etc/init.d/S33pulseaudio
