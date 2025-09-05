@@ -27,7 +27,7 @@ network={
 ## rpi zero 2w (pixel)
 
 ```sh
-cd zero2w
+cd zero2w64
 make initConfig
 make
 # or

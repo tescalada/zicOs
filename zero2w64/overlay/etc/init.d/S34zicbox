@@ -2,8 +2,12 @@
 
 start() {
 	printf "Starting zicBox: "
-    setterm --cursor off --blank force --clear > /dev/tty1
-	cd /opt/zicBox && ./pixel >> /var/log/pixel.log 2>&1 &
+
+	# cd /opt/zicBox && ./pixel >> /var/log/pixel.log 2>&1 &
+	
+	# Use 'su' to run the command as the 'zic' user
+    su zic -c "cd /opt/zicBox && ./pixel >> /var/log/pixel.log 2>&1 &"
+
 	echo "OK"
 }
 stop() {
