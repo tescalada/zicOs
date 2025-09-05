@@ -1,5 +1,8 @@
 - TODO remove pulseudio
 
+- TODO think about a solution for common overlay
+        but still have specific one per platform?
+
 - TODO when running pixel, log output using tee
 
 - TODO before to even try to fix pulseaudio, lets try with ALSA only and see the performances...
