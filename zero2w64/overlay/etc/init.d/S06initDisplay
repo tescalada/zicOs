@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# there could be a splash when starting and one when switching off...
+
+/opt/zicBox/splash >> /var/log/splash.log 2>&1

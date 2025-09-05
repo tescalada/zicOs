@@ -34,9 +34,35 @@ make
 # ZICBOX_PATH=/home/alex/Music/zicBox make
 ```
 
+## rpi 4
+
+To be done / re-worked
+
 ## Hints
 
 Use `dmesg` to see log of boot/initialisation of the board.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Old stuff
 

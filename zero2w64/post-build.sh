@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-./board/raspberrypizero2w/post-build.sh
+./board/raspberrypizero2w-64/post-build.sh
 
 # Configure fstab to mount /boot partition
 mkdir -p ${TARGET_DIR}/boot
