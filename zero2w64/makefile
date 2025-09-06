@@ -11,8 +11,8 @@ initConfig:
 
 save:
 	@$(MAKE) -C $(BUILDBR_DIR) O=$(OUTPUT_DIR) savedefconfig
-	@$(MAKE) -C $(BUILDBR_DIR) O=$(OUTPUT_DIR) linux-savedefconfig
-	cp $(OUTPUT_DIR)/build/linux-custom/defconfig $(DIR)/linux_defconfig
+#	@$(MAKE) -C $(BUILDBR_DIR) O=$(OUTPUT_DIR) linux-savedefconfig
+#	cp $(OUTPUT_DIR)/build/linux-custom/defconfig $(DIR)/linux_defconfig
 
 # This is a generic target that forwards any command to Buildroot
 # Example: make menuconfig, make linux-menuconfig, make clean

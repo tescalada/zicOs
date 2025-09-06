@@ -4,9 +4,12 @@ start() {
 	printf "Starting zicBox: "
 
 	# cd /opt/zicBox && ./pixel >> /var/log/pixel.log 2>&1 &
+	cd /opt/zicBox && ./pixel 2>&1 | tee /var/log/pixel.log &
 	
 	# Use 'su' to run the command as the 'zic' user
-    su zic -c "cd /opt/zicBox && ./pixel >> /var/log/pixel.log 2>&1 &"
+    # chgrp zic /dev/gpiomem
+    # chgrp zic /dev/spidev0.*
+	# su zic -c "cd /opt/zicBox && ./pixel >> /var/log/pixel.log 2>&1 &"
 
 	echo "OK"
 }

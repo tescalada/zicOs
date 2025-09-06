@@ -33,10 +33,8 @@ fi
 #    echo "filebrowser already installed."
 #fi
 
-# Move pulse init.d
-# In overlay, it is called S50pulseaudio, in order to overwrite the original one
-# Then in the post-build, we rename it to S94...
-# mv ${TARGET_DIR}/etc/init.d/S50pulseaudio ${TARGET_DIR}/etc/init.d/S33pulseaudio
+mv ${TARGET_DIR}/etc/init.d/S10mdev ${TARGET_DIR}/etc/init.d/S000mdev
+mv ${TARGET_DIR}/etc/init.d/S05avahi-setup.sh ${TARGET_DIR}/etc/init.d/S35avahi-setup.sh
 
 echo "Copying ./.wpa_supplicant.conf"
 ROOT_DIR=$(readlink -f ${TARGET_DIR}/../../..)
