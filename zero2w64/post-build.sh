@@ -33,8 +33,8 @@ fi
 #    echo "filebrowser already installed."
 #fi
 
-mv ${TARGET_DIR}/etc/init.d/S10mdev ${TARGET_DIR}/etc/init.d/S000mdev
-mv ${TARGET_DIR}/etc/init.d/S05avahi-setup.sh ${TARGET_DIR}/etc/init.d/S35avahi-setup.sh
+mv ${TARGET_DIR}/etc/init.d/S10mdev ${TARGET_DIR}/etc/init.d/S000mdev || true
+mv ${TARGET_DIR}/etc/init.d/S05avahi-setup.sh ${TARGET_DIR}/etc/init.d/S35avahi-setup.sh || true
 
 echo "Copying ./.wpa_supplicant.conf"
 ROOT_DIR=$(readlink -f ${TARGET_DIR}/../../..)
@@ -45,22 +45,18 @@ else
     echo "No ./.wpa_supplicant.conf found"
 fi
 
-
-echo "Adding user 'zic'..."
-# Check if the user already exists to prevent duplication
-if ! grep -q "^zic:" "$TARGET_DIR/etc/passwd"; then
-    # Add the 'zic' group with GID 1000
-    echo "zic:x:1000:" >> "$TARGET_DIR/etc/group"
-
-    # Add the 'zic' user with UID 1000 and home directory /home/zic
-    echo "zic::1000:1000:Linux User,,,:/home/zic:/bin/sh" >> "$TARGET_DIR/etc/passwd"
-
-    # Create the home directory and set permissions
-    # mkdir -p "$TARGET_DIR/home/zic"
-    # chown -R 1000:1000 "$TARGET_DIR/home/zic"
-    # chmod 755 "$TARGET_DIR/home/zic"
-
-    echo "User 'zic' added successfully."
-else
-    echo "User 'zic' already exists."
-fi
+# echo "Adding user 'zic'..."
+# # Check if the user already exists to prevent duplication
+# if ! grep -q "^zic:" "$TARGET_DIR/etc/passwd"; then
+#     # Add the 'zic' group with GID 1000
+#     echo "zic:x:1000:" >> "$TARGET_DIR/etc/group"
+#     # Add the 'zic' user with UID 1000 and home directory /home/zic
+#     echo "zic::1000:1000:Linux User,,,:/home/zic:/bin/sh" >> "$TARGET_DIR/etc/passwd"
+#     # Create the home directory and set permissions
+#     # mkdir -p "$TARGET_DIR/home/zic"
+#     # chown -R 1000:1000 "$TARGET_DIR/home/zic"
+#     # chmod 755 "$TARGET_DIR/home/zic"
+#     echo "User 'zic' added successfully."
+# else
+#     echo "User 'zic' already exists."
+# fi

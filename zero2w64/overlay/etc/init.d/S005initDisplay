@@ -4,7 +4,7 @@ start() {
 	/opt/zicBox/splash logo &
 }
 stop() {
-	/opt/zicBox/splash &
+#	/opt/zicBox/splash &
 }
 
 case "$1" in
